@@ -1,0 +1,89 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>#23 - CSS Grid - deo 2 od 3</title>
+</head>
+<style>
+
+ .okvir img {
+     width: 40px;
+    height: 50px; 
+ } 
+
+    .okvir{
+        border: 1px dotted red;
+        width: 600px;
+        height: 600px;
+        display: grid;
+        grid-template: "logo     header    header"
+                        "title   title     sidebar"
+                        "body    body      sidebar"
+                        "footer  footer    footer";
+        grid-template-rows:100px 50px 1fr 50px ;
+        grid-template-columns: 200px 1fr 150px;
+    }
+
+    #logo {
+        grid-area: logo;
+        background-color: yellowgreen;
+    }
+
+    #baner{
+        grid-area: header;
+        background-color: brown;
+    }
+
+    #naslov-stranice{
+        grid-area: title;
+        background-color: beige;
+    }
+
+    #sadrzaj-stranice{
+        grid-area: body;
+        background-color: aqua;
+    }
+    #sajdbar {
+        grid-area: sidebar ;
+        background-color: aquamarine;
+    }
+
+    #podnozje{
+        grid-area:  footer;
+        background-color: yellow;
+        text-align: center;
+        padding-top: 14px;
+    }
+
+</style>
+<body>
+    <div class="okvir">
+     
+        <div id="logo">
+            <img id="" src="image/fb.png" alt="Logo">
+        </div>
+       
+   <div id="baner">
+    <img id="" src="image/insta.png" alt="Banner">
+   </div>
+      
+     
+
+        <div id="naslov-stranice">O nama</div>
+
+        <div id="sadrzaj-stranice">
+            <p>Neki test o nama koji moze imati razne tekstualne elemente.</p>
+            <p>Moze imati i linkove, naravno...</p>
+        </div>
+
+        <div id="sajdbar">
+            Sajdbar <br>
+            sa nekim linkovima ili drugim stvarima
+        </div>
+
+        <div id="podnozje">&copy; Branko Blesic Jr.</div>
+    </div>
+    
+</body>
+</html>

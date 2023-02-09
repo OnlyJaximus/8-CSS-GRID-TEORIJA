@@ -1,0 +1,77 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>#24 - CSS Grid - deo 3 od 3</title>
+    <style>
+         #slika {
+            height: 100%;
+            width: 100%;
+        }
+
+        .okvir2{
+        /* border: 1px dotted red; */
+        width: 600px;
+        height: 600px;
+        display: grid;
+        grid-template-rows:1fr 50px 100px;
+        /* grid-template-rows:1fr auto auto; */
+        }
+
+        #slika{
+            /* grid-row-start:1;
+            grid-row-end: 4;
+
+            grid-column-start: 1;
+            grid-column-end: 2;*/
+
+            grid-area: 1/1/4/2; 
+
+        }
+
+        
+        #naslov{
+            /* grid-row-start: 2;
+            grid-row-end: 3; */
+
+            /* grid-column-start: 1;
+            grid-column-end: 2; */
+
+            background-color:#ffffff80;
+            grid-area: 2/1/3/2;
+            text-align: center;
+            
+        }
+
+        #opis{
+              /* red pocetak, kolona pocetak / red kraj kolona kraj */
+              /* grid-row-start: 3;
+              grid-row-end: 4;
+
+              grid-column-start:1;
+              grid-column-start:2; */
+
+              background-color: #00000070;
+              color: #ffffff;
+              grid-area: 3/1/4/2;
+              text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="okvir2">
+        <img id="slika" src="4.jpg" alt="Slika">
+
+        <div id="naslov">Naziv slike</div>
+
+        <div id="opis">
+            Neki kratak opis ove slike koji treba da ide 
+            ispod naslova, ali i naslov i opis zajedno
+            treba da prelaze preko slike. Lorem ipsum dolor sit amet,
+             consectetur adipisicing elit. Nihil porro obcaecati architecto.
+        </div>
+    </div>
+    
+</body>
+</html>
